@@ -1,67 +1,79 @@
 const router = require('express').Router();
+const { v4: uuidv4 } = require('uuid');
 
 let users = [];
 
+// "/users" --> http://localhost:3000/users
+// "/users/42"
+// "/users/42/details"
+// "/products"
+// "/" --> http://localhost:3000/
+
+
 router.get('/users', (req, res) => {
+    // 200 : OK
     res.status(200).json(users);
-})
+});
+
 
 router.get('/users/:id', (req, res) => {
-    const user = users.find(user => user.id === Number(req.params.id));
-    if (user) {
-        res.status(200).json(user);
+    // Le cast avec Number fonctionne si l'id comparé est un number, ce qui n'est plus le cas
+    // avec la génération d'UUID dans la création de l'utilisateur
+    // const user = utilisateurs.find(user => user.id === Number(req.params.id))
+    const user = users.find(user => user.id === req.params.id);
+    if (!user) {
+        res.status(404).json({ error: `Utilisateur avec l'id : ${req.params.id} n'existe pas` });
     }
-    else {
-        res.status(404).json({ "message": "L'utilisateur n'a pas été trouvé" });
-    }
+    res.status(200).json(user);
 
-})
+});
 
 router.post('/users', (req, res) => {
     const { username, email } = req.body;
+
+    // Simple vérification
+    if (!username || !email) {
+        // 403 : Unauthorized va permettre de spécifier une erreur côté client
+        // On y attache un message détaillant l'erreur
+        res.status(403).json({ error: "Username or Email is required" });
+    }
     const user = {
-        id: users.length + 1,
+        id: uuidv4(),
         username,
         email
     }
 
     users.push(user);
-
     res.status(201).json(users);
-})
+});
 
 router.patch('/users/:id', (req, res) => {
     const { username, email } = req.body;
-    const idUser = Number(req.params.id);
-    const userIndex = users.findIndex(user => user.id === idUser);
+    const { id } = req.params;
+    const user = users.find(user => user.id === id);
 
-    if (userIndex !== -1) {
-        users[userIndex] = {
-            id: idUser,
-            username,
-            email
-        }
-
-        res.status(200).json(users[userIndex]);
-    } else {
-        res.status(404).json({ "message": "L'utilisateur n'a pas été trouvé" });
+    if (!user) {
+        res.status(404).json({ error: `Utilisateur avec l'id : ${id} n'existe pas` });
     }
 
-})
+    user.username = username;
+    user.email = email;
+    res.status(200).json(users);
+
+});;
 
 router.delete('/users/:id', (req, res) => {
-    const idUser = Number(req.params.id);
-    const userIndex = users.findIndex(user => user.id === idUser);
+    const { id } = req.params;
+    const user = users.find(user => user.id === id);
 
-
-    if (userIndex !== -1) {
-        users.splice(userIndex, 1);
-        res.status(200).json(users);
+    if (!user) {
+        res.status(404).json({ error: `Utilisateur avec l'id : ${id} n'existe pas` });
     }
-    else {
-        res.status(404).json({ "message": "L'utilisateur n'a pas été trouvé" });
-    }
+    users = users.filter(user => user.id !== id);
 
-})
+    // 204 : Ok requête effectué avec succès mais pas de réponse
+    res.status(204).send();
+
+});
 
 module.exports = router;
