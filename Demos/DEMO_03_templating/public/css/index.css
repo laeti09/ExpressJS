@@ -1,0 +1,38 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.nav-links {
+    display: flex;
+    list-style-type: none;
+    padding: 0.5rem;
+}
+
+.nav-links a {
+    text-decoration: none;
+    margin: 1.3rem;
+    padding: 0.5rem;
+}
+
+.card {
+    margin: 2.5rem 1rem;
+    padding: 1.2rem;
+    border: solid 2px black;
+    border-radius: 15px;
+}
+
+.button {
+    padding: 0.5rem;
+    background-color: rgb(111, 111, 179);
+    border-radius: 15px;
+    text-decoration: none;
+    color: white;
+}
+
+.available {
+    color: green;
+}
+
+.unavailable {
+    color: red;
+}
