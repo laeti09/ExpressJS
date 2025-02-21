@@ -1,0 +1,18 @@
+doctype html 
+html(lang=fr)
+    head 
+        meta(name='description' content='Le site web')
+        title Mon Restaurant 
+        link(rel='stylesheet', href='/css/index.css')
+
+    body 
+        nav.navbar
+            ul 
+                li.navbar-element
+                    a(href="/") Home
+                li.navbar-element  
+                    a(href="/menu") Menu
+                li.navbar-element  
+                    a(href="/admin") Admin
+
+        block content

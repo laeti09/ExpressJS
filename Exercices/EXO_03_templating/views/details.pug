@@ -1,0 +1,17 @@
+extends layout 
+
+block content 
+    main
+        h1 #{ plat.nom }
+        img(src=`/images/${plat.image}`)
+        p #{ plat.description }
+        p #{ plat.prix } €
+
+        p Allergènes :
+        ul  
+            each allergene in plat.allergenes
+                li #{ allergene }
+        p Ingrédients :
+        ul 
+            each ingredient in plat.ingredients
+                li #{ ingredient }

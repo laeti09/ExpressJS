@@ -1,0 +1,11 @@
+extends layout 
+
+block content 
+    main
+        h1 Restaurant
+        .container-box
+            p #{restaurant.description}
+            p Nos plats phares :
+            ul
+                each plat in restaurant.platsPhares
+                    li #{plat}

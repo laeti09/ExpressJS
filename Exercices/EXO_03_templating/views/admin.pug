@@ -1,0 +1,29 @@
+extends layout 
+
+block content 
+    main 
+        h1 Administrateur
+        h2 Ajouter un plat 
+        form(action="/admin", method="POST")
+            label(for="nom") Nom: 
+            input(type="text", name= "nom")
+            label(for="prix") Prix:
+            input(type="number", step="0.01", name="prix")
+            label(for="description") Description:
+            textarea(name="description")
+            label(for="image") Image: 
+            input(type="text", name= "image")
+            label(for="allergene") Allergene:
+            input(type="text", name="allergene")
+            label(for="ingredient") Ingrédient:
+            input(type="text", name="ingredient")
+            label(for="select") Type: 
+            select(name="type")
+                option(value="entrees") Entrées
+                option(value="plats") Plats
+                option(value="desserts") Desserts
+
+            button(type="submit") Envoyer
+
+        if message
+            p #{ message }

@@ -1,0 +1,157 @@
+{
+    "entrees": [
+        {
+            "id": 1,
+            "nom": "Raviole de langoustine au bouillon de gingembre",
+            "prix": 20,
+            "description": "Des ravioles cuites à la vapeur avec un bouillon léger et très parfumé.",
+            "image": "raviole_langoustine.avif",
+            "allergenes": [
+                "Crustacés",
+                "Soja"
+            ],
+            "ingredients": [
+                "Langoustine",
+                "Raviole",
+                "Gingembre frais",
+                "Carotte",
+                "Sauce soja"
+            ]
+        },
+        {
+            "id": 2,
+            "nom": "Soupe patates douces, poireaux et crème coco",
+            "prix": 14.35,
+            "description": "Une soupe onctueuse composée de patates douces et de poireaux",
+            "image": "soupe_patates_poireaux.avif",
+            "allergenes": [],
+            "ingredients": [
+                "Poireau",
+                "Patate douce",
+                "Oignon",
+                "Carotte",
+                "Crème de coco"
+            ]
+        },
+        {
+            "id": 3,
+            "nom": "Gaspacho de courgette au curcuma",
+            "prix": 18.50,
+            "description": "Soupe froide, très bien pour l'été, fait soit avec des courgettes vertes soit des jaunes.",
+            "image": "gaspacho_courgette.avif",
+            "allergenes": [],
+            "ingredients": [
+                "Courgette",
+                "Oignon nouveau",
+                "Curcuma en poudre",
+                "Branche de thym",
+                "Citron jaune"
+            ]
+        }
+    ],
+    "plats": [
+        {
+            "id": 1,
+            "nom": "Salade d'hiver au potimarron rôti, betterave et comté",
+            "prix": 12.99,
+            "description": "Pour faire le plein de vitamines en hiver, une belle salade de potimarron grillé, betteraves, mâche, comté et clémentines avec une vinaigrette de noisettes.",
+            "image": "salade_potimarron.avif",
+            "allergenes": [
+                "Noix"
+            ],
+            "ingredients": [
+                "Potimarron",
+                "Betterave rouge cuite",
+                "Feuille de mâche",
+                "Clémentine",
+                "Comté",
+                "Grenade",
+                "Huile de noisette"
+            ]
+        },
+        {
+            "id": 2,
+            "nom": "Pastilla aux fruits de mer",
+            "prix": 17.99,
+            "description": "Pastilla composée de fruits de mer avec une sauce chermoula",
+            "image": "pastilla_fruits_de_mer.avif",
+            "allergenes": [
+                "Noix",
+                "Crustacés",
+                "Poissons"
+            ],
+            "ingredients": [
+                "Vermicelle de riz",
+                "Noix de Saint Jacques",
+                "Crevette grise",
+                "Moule",
+                "Merlan",
+                "Feuille de brick",
+                "Jus de citron"
+            ]
+        },
+        {
+            "id": 3,
+            "nom": "Accras de poisson blanc",
+            "prix": 19.50,
+            "description": "Une purée de pommes de terre mélangée avec un cabillaud poché au lait parfumé. La farce est assaisonnée de piment, passée dans un appareil à beignets puis frite.",
+            "image": "accras_poisson.avif",
+            "allergenes": [
+                "Poisson",
+                "Lait",
+                "Oeuf"
+            ],
+            "ingredients": [
+                "Pavé de cabillaud",
+                "Pomme de terre",
+                "Lait 1/2 écrémé",
+                "Persil"
+            ]
+        }
+    ],
+    "desserts": [
+        {
+            "id": 1,
+            "nom": "Panna Cotta aux baies de Timur, coulis de mangue",
+            "prix": 8.95,
+            "description": "Une crème prise en gelée servie avec un coulis de mangue onctueux.",
+            "image": "panna_cotta.avif",
+            "allergenes": [],
+            "ingredients": [
+                "Créme liquide allégée",
+                "Sucre en poudre",
+                "Mangue",
+                "Feuille de gélatine",
+                "Gousse de vanille"
+            ]
+        },
+        {
+            "id": 2,
+            "nom": "Espuma cerise",
+            "prix": 9.20,
+            "description": "Une texture incroyable qui servira de base à nombre de vos recettes traditionnelles. Peut se servir sur un sablé au chocolat !",
+            "image": "espuma_cerise.avif",
+            "allergenes": [],
+            "ingredients": [
+                "Cerise au sirop",
+                "Crème liquide entière",
+                "Sucre en poudre",
+                "Feuille de gélatine"
+            ]
+        },
+        {
+            "id": 3,
+            "nom": "Biscuit Dacquois cacao",
+            "prix": 15.75,
+            "description": "Un biscuit moelleux aux amandes et cacao poudre, pouvant servir à la réalisation d'entremets.",
+            "image": "biscuit_cacao.avif",
+            "allergenes": [],
+            "ingredients": [
+                "Sucre en poudre",
+                "Poudre d'amande",
+                "Cacao en poudre non sucré",
+                "Sucre glace"
+            ]
+        }
+    ]
+}

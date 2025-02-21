@@ -1,0 +1,53 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: rgb(255, 255, 255);
+}
+
+.navbar ul {
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+    background-color: rgb(92, 69, 92);
+
+}
+
+.container-box {
+    background-color: rgb(182, 163, 201);
+}
+
+h1 {
+    color: white;
+    padding: 0.5rem;
+    background-color: rgb(191, 175, 206);
+    border-radius: 15px;
+}
+
+.navbar-element {
+    margin: 0.2rem;
+    padding: 1rem;
+}
+
+.navbar-element:hover {
+    cursor: pointer;
+    background-color: rgb(80, 50, 78);
+}
+
+.navbar-element a {
+    text-decoration: none;
+    color: white;
+}
+
+img {
+    height: 300px;
+    width: 350px;
+}
+
+form {
+    width: 20rem;
+    display: flex;
+    flex-direction: column;
+}
+
+form label {
+    margin: 0.5rem;
+}
